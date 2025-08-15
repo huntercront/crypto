@@ -400,8 +400,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             } else {
                element.textContent = value;
             }
-            if (element.classList.contains(".faq-answer")) {
-               element.innerHTML(value);
+            if (element.classList.contains("faq-answer")) {
+               element.innerHTML = value;
             }
          }
 
