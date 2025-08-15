@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+	<title data-i18n="html.title">SKZT - Первый регулируемый стейблкоин в Казахстане</title>
+</head>
+
+<body class="loading">
+	<div class="sprite-block">
+		<svg width="0" height="0" class="hidden">
+			<symbol fill="none" viewBox="0 0 28 28" id="check-circle">
+				<path d="m10.5 14 2.3 2.3 4.7-4.6m8.2 2.3a11.7 11.7 0 1 1-23.4 0 11.7 11.7 0 0 1 23.4 0Z"
+					stroke="#07CF97" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"></path>
+			</symbol>
+			<symbol fill="none" viewBox="0 0 25 24" id="doc-load">
+				<path d="M12.2 16v-6m0 6-3-3m3 3 3-3m0-11h-9a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7l-5-5Z"
+					stroke="#535A65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+			</symbol>
+			<symbol fill="none" viewBox="0 0 24 24" id="wallet">
+				<path
+					d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0-2 2m0 0a2 2 0 0 0 2 2h15a1 1 0 0 1 1 1v4M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4m0-4h-3a2 2 0 0 0 0 4h3m0-4a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+			</symbol>
+			<symbol fill="none" viewBox="0 0 18 18" id="equals">
+				<rect width="18" height="18" rx="9" fill="#07CF97"></rect>
+				<path d="M5 7.3h8m-8 3.5h8" stroke="#F6F8F9" stroke-width="1.5" stroke-linecap="round"
+					stroke-linejoin="round">
+				</path>
+			</symbol>
+			<symbol fill="none" viewBox="0 0 20 20" id="chevron-down">
+				<path d="m5 7.5 5 5 5-5" stroke="#535A65" stroke-width="1.7" stroke-linecap="round"
+					stroke-linejoin="round" />
+			</symbol>
+		</svg>
+	</div>
+	<header class="header">
+		<div class="container">
+			<div class="header-content c-sb">
+				<a href="#top" class="logo c-s">
+					<img src="./img/skzt-logo.svg" fetchpriority="high" alt="sKZT logo">
+				</a>
+				<div class="nav-wrap c-s">
+					<nav class="nav no-list">
+						<ul>
+							<li><a href="#whitepaper" data-i18n="nav.links.1">Whitepaper</a></li>
+							<li><a href="#benefits" data-i18n="nav.links.2">Преимущества</a></li>
+							<li><a href="#testing" data-i18n="nav.links.3">Заявка на участие</a></li>
+							<li><a href="#partners" data-i18n="nav.links.4">Партнеры</a></li>
+							<li><a href="#faq" data-i18n="nav.links.5">FAQ</a></li>
+							<li><a href="#contacts" data-i18n="nav.links.6">Контакты</a></li>
+						</ul>
+						<div class="hover-bg"></div>
+					</nav>
+					<div class="header-actions c-c">
+						<div class="lang-selector">
+							<button class="lang-btn btn outline">
+								<span class="lang-name" data-i18n="html.curntLang">Рус</span>
+								<span class="icon icon-20 c-c c-inherit">
+									<svg>
+										<use xlink:href="#chevron-down"></use>
+									</svg>
+								</span>
+							</button>
+							<ul class="lang-menu no-list">
+								<li>
+									<button data-lang="ru" class="lang-item">Рус</button>
+								</li>
+								<li>
+									<button data-lang="kk" class="lang-item">Қаз</button>
+								</li>
+							</ul>
+						</div>
+
+						<a class="btn disabled wallet-btn">
+							<span class="icon icon-24 c-c c-inherit">
+								<svg>
+									<use xlink:href="#wallet"></use>
+								</svg>
+							</span>
+							<span data-i18n="nav.button">Открыть кошелек</span>
+						</a>
+						<button class="mob-menu btn outline">
+							<span class="icon icon-24 c-c">
+								<svg fill="none" viewBox="0 0 24 24">
+									<path
+										d="M12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm0-7a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm0 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"
+										stroke="#535A65" stroke-width="2" stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section id="top" class="hero">
+		<div class="container">
+			<div class="hero-wrap c-c">
+				<div class="video-bg lazy-progress lazy-img">
+					<video class="lazy" data-src="./video/bg-02.mp4" autoplay muted loop fetchpriority="high"></video>
+					<div class="overlay"></div>
+				</div>
+				<div class="hero-content c-c">
+					<div class="tag">
+						<span>1 SKZT</span>
+						<div class="icon icon-18">
+							<svg>
+								<use xlink:href="#equals"></use>
+							</svg>
+						</div>
+						<span data-i18n="hero.currency">1 тенге</span>
+					</div>
+					<h1 class="title m-0" data-i18n="hero.title">Первый регулируемый стейблкоин в Казахстане</h1>
+					<span class="word-scroller title hero-subtitle">
+						<div class="inner-words c-c d-column">
+							<div class="word" data-i18n="hero.words.1">Надежность</div>
+							<div class="word" data-i18n="hero.words.2">Стабильность</div>
+							<div class="word" data-i18n="hero.words.3">Инновации</div>
+							<div class="word" data-i18n="hero.words.1">Надежность</div>
+						</div>
+					</span>
+					<p class="hero-descr f-20" data-i18n="hero.description">Стейблкоин, привязанный 1:1 к тенге – ваш
+						цифровой актив с
+						гарантией
+						стабильности
+					</p>
+					<a href="#testing" class="btn main" data-i18n="hero.button">Стать первым пользователем</a>
+					<img src="./img/charts.svg" alt="" class="charts">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="whitepaper" class="about animate fade">
+		<div class="container">
+			<div class="about-wrap">
+				<div class="about-img lazy-img lazy-progress">
+					<picture>
+						<source type="image/jpeg" data-srcset="./img/about-img.jpg 1x, ./img/about-img2x.jpg 2x">
+						<img class="lazy" data-src="./img/about-img.jpg" alt="" width="620" height="445">
+					</picture>
+				</div>
+				<div class="about-comtent">
+					<div class="tag tag-sm">
+						<span>skzt</span>
+					</div>
+					<h2 class="title" data-i18n="about.title">Cоответствие самым высоким стандартам отрасли</h2>
+					<p class="m-0 f-18 about-descr" data-i18n="about.description">В мире, где криптовалюты известны
+						своей
+						волатильностью, мы
+						представляем первый в Казахстане
+						регулируемый стейблкоин,
+						полностью обеспеченный национальной валютой – тенге. Каждый стейблкоин равен 1 KZT, что
+						обеспечивает максимальную
+						предсказуемость и безопасность ваших финансовых операций.</p>
+					<a href="#" class="btn outline">
+						<span class="icon icon-24">
+							<svg>
+								<use xlink:href="#doc-load"></use>
+							</svg>
+						</span>
+						<span>Whitepaper</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="benefits" class="benefits animate fade">
+		<div class="container">
+			<div class="benefits-wrap">
+
+				<div class="benefits-content">
+					<div class="tag tag-sm">
+						<span>skzt</span>
+					</div>
+					<h2 class="title" data-i18n="benefits.title">Основные возможности SKZT</h2>
+					<p class="f-18 benefits-descr" data-i18n="benefits.description">Наша цель - надежность,
+						прозрачность, доступность</p>
+					<a href="#testing" class="btn outline" data-i18n="benefits.button">Стать первым пользователем</a>
+				</div>
+
+				<div class="benefits-list">
+
+					<div class="benefits-item">
+						<div class="icon s-s icon-36">
+							<svg fill="none" viewBox="0 0 36 36">
+								<path
+									d="M12 4.5H7.5a3 3 0 0 0-3 3v21a3 3 0 0 0 3 3H12m12-27h4.5a3 3 0 0 1 3 3v21a3 3 0 0 1-3 3H24M18 30v3m0-12v3m0-12v3m0-12v3"
+									stroke="#535A65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+						<h3 class="title-sm" data-i18n="benefits.items.1.title">Полное обеспечение 1:1</h3>
+						<p class="m-0" data-i18n="benefits.items.1.description">Каждый токен подкреплен реальными тенге
+							в
+							регулируемых институтах</p>
+					</div>
+
+					<div class="benefits-item">
+						<div class="icon s-s icon-36">
+							<svg fill="none" viewBox="0 0 37 36">
+								<path d="m18.5 21 6-6m-19 13.5a15 15 0 1 1 26 0" stroke="#535A65" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+						<h3 class="title-sm" data-i18n="benefits.items.2.title">Скорость и удобство</h3>
+						<p class="m-0" data-i18n="benefits.items.2.description">Моментальные переводы, низкие комиссии и
+							доступность 24/7 без границ</p>
+					</div>
+
+					<div class="benefits-item">
+						<div class="icon s-s icon-36">
+							<svg fill="none" viewBox="0 0 36 36">
+								<path
+									d="M11.8 11.8 16 16m4.2 0 4-4M11.8 24l4.1-4m4.2 0 4 4M7.5 4.5h21a3 3 0 0 1 3 3v21a3 3 0 0 1-3 3h-21a3 3 0 0 1-3-3v-21a3 3 0 0 1 3-3Zm4.5 6.8a.8.8 0 1 1-1.5 0 .8.8 0 0 1 1.5 0Zm13.5 0a.8.8 0 1 1-1.5 0 .8.8 0 0 1 1.5 0ZM12 24.6a.8.8 0 1 1-1.5 0 .8.8 0 0 1 1.5 0Zm13.5 0a.8.8 0 1 1-1.5 0 .8.8 0 0 1 1.5 0ZM21 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+									stroke="#535A65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+						<h3 class="title-sm" data-i18n="benefits.items.3.title">Прозрачность и надежность</h3>
+						<p class="m-0" data-i18n="benefits.items.3.description">Регуляторный контроль и проверки — ваши
+							деньги в безопасности</p>
+					</div>
+
+					<div class="benefits-item">
+						<div class="icon s-s icon-36">
+							<svg fill="none" viewBox="0 0 37 36">
+								<path
+									d="m14 18 3 3 6-6m7.5 4.5c0 7.5-5.3 11.2-11.5 13.4h-1C11.7 30.7 6.5 27 6.5 19.5V9A1.5 1.5 0 0 1 8 7.5c3 0 6.8-1.8 9.4-4a1.8 1.8 0 0 1 2.2 0c2.7 2.2 6.4 4 9.4 4A1.5 1.5 0 0 1 30.5 9v10.5Z"
+									stroke="#535A65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+						<h3 class="title-sm" data-i18n="benefits.items.4.title">Легальность и регулирование</h3>
+						<p class="m-0" data-i18n="benefits.items.4.description">Первый стейблкоин под контролем
+							Национального Банка Казахстана</p>
+					</div>
+
+					<div class="benefits-item">
+						<div class="icon s-s icon-36">
+							<svg fill="none" viewBox="0 0 36 36">
+								<path
+									d="M3 31.5a12 12 0 0 1 20-9m1 6 3 3 6-6M22.5 12a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"
+									stroke="#535A65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+						<h3 class="title-sm" data-i18n="benefits.items.5.title">Доступность для всех</h3>
+						<p class="m-0" data-i18n="benefits.items.5.description">Операции со стейблкоином — в пару кликов
+							в кошельке</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="testing" class="testing animate fade">
+		<div class="container">
+			<div class="testing-wrap">
+				<div class="testing-content">
+					<div class="content-head">
+						<h2 class="title">Заявки на участие в первой волне использования sKZT</h2>
+						<p class="f-18 testing-descr">Оставьте свои контактные данные, и мы сообщим вам о дате
+							запуска</p>
+					</div>
+					<div class="content-footer">
+						<p class="m-0">Заявки принимаются до 15.10.2025</p>
+					</div>
+				</div>
+				<div class="testing-form">
+					<div class="form">
+						<form class="form">
+							<div class="input text">
+								<input type="text" placeholder="ФИО (полностью)" name="name" autocomplete="name"
+									required />
+							</div>
+							<div class="input text">
+								<input type="tel" placeholder="Номер телефона" name="tel" autocomplete="tel" required />
+							</div>
+							<div class="input text">
+								<input type="email" placeholder="Электронная почта" name="email" autocomplete="email"
+									required />
+							</div>
+							<label class="input checkbox">
+								<input type="checkbox" id="conditions" name="confirm" checked />
+								<span class="mark"></span>
+								<span class="like-label">Я принимаю условия</span>
+							</label>
+							<div class="input submit">
+								<input type="submit" class="btn main" value="Отправить" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="wallet animate fade">
+		<div class="container">
+			<div class="wallet-wrap">
+				<div class="wallet-content">
+					<div class="tag tag-sm">
+						<span>Кошелек</span>
+					</div>
+					<h2 class="title">Открыть кошелек с sKZT — быстро и просто</h2>
+					<p class="walet-info">Чтобы открыть кошелек, вам понадобится:</p>
+					<ul class="requests no-list s-s d-column">
+						<li class="c-s">
+							<span class="icon icon-28">
+								<svg>
+									<use xlink:href="#check-circle"></use>
+								</svg>
+							</span>
+							<span>Быть резидентом Казахстана</span>
+						</li>
+						<li class="c-s">
+							<span class="icon icon-28">
+								<svg>
+									<use xlink:href="#check-circle"></use>
+								</svg>
+							</span>
+							<span>Иметь ИИН и банковский счёт</span>
+						</li>
+					</ul>
+					<a class="btn disabled">
+						<span class="icon icon-24 c-c c-inherit">
+							<svg>
+								<use xlink:href="#wallet"></use>
+							</svg>
+						</span>
+						</span>Доступно с 15.11<span>
+					</a>
+				</div>
+				<div class="wallet-img lazy-img lazy-progress">
+					<picture>
+						<source type="image/jpeg" data-srcset="./img/wallet-img.jpg 1x, ./img/wallet-img.jpg 2x">
+						<img class="lazy" data-src="./img/wallet-img.jpg" alt="wallet" width="636" height="453">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="partners" class="partners animate fade">
+		<div class="container">
+			<div class="partners-wrap">
+				<h2 class="title-m">Сотрудничаем с</h2>
+				<div class="partners-list">
+
+					<div class="partner lazy-img lazy-progress">
+						<picture>
+							<source type="image/svg+xml" data-srcset="./img/partners/logo-01.svg">
+							<img class="lazy" data-src="./img/partners/logo-01.svg" alt="" width="55" height="55">
+						</picture>
+					</div>
+
+					<div class="partner lazy-img lazy-progress">
+						<picture>
+							<source type="image/svg+xml" data-srcset="./img/partners/logo-02.svg">
+							<img class="lazy" data-src="./img/partners/logo-02.svg" alt="" width="168" height="45">
+						</picture>
+					</div>
+
+					<div class="partner lazy-img lazy-progress">
+						<picture>
+							<source type="image/svg+xml" data-srcset="./img/partners/logo-03.svg">
+							<img class="lazy" data-src="./img/partners/logo-03.svg" alt="" width="139" height="47">
+						</picture>
+					</div>
+
+					<div class="partner lazy-img lazy-progress">
+						<picture>
+							<source type="image/svg+xml" data-srcset="./img/partners/logo-04.svg">
+							<img class="lazy" data-src="./img/partners/logo-04.svg" alt="" width="152" height="53">
+						</picture>
+					</div>
+
+					<div class="partner lazy-img lazy-progress">
+						<picture>
+							<source type="image/svg+xml" data-srcset="./img/partners/logo-05.svg">
+							<img class="lazy" data-src="./img/partners/logo-05.svg" alt="" width="200" height="45">
+						</picture>
+					</div>
+
+					<div class="partner lazy-img lazy-progress">
+						<picture>
+							<source type="image/svg+xml" data-srcset="./img/partners/logo-06.svg">
+							<img class="lazy" data-src="./img/partners/logo-06.svg" alt="" width="176" height="41">
+						</picture>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="faq" class="faq animate fade">
+		<div class="container">
+			<div class="faq-wrap">
+				<div class="faq-content">
+					<div class="tag tag-sm">
+						<span>Faq</span>
+					</div>
+					<h2 class="title">Часто задаваемые вопросы</h2>
+					<p class="walet-info">Отвечаем на вопросы по работе sKZT</p>
+				</div>
+				<div class="faq-list">
+
+					<details class="faq-question open" open>
+						<summary class="question-name">
+							<h4 class="question-title">Что такое sKZT?</h4>
+							<span class="question-icon"></span>
+						</summary>
+						<div class="faq-answer">
+							<p>sKZT – это стейблкоин, привязанный к курсу 1 казахстанского тенге (KZT). Он обеспечен
+								резервами в фиатной валюте (KZT) и выпускается под контролем регулятора в рамках
+								«регуляторной песочницы».</p>
+						</div>
+					</details>
+
+					<details class="faq-question">
+						<summary class="question-name">
+							<h4 class="question-title">Чем sKZT отличается от других криптовалют?</h4>
+							<span class="question-icon"></span>
+						</summary>
+						<div class="faq-answer">
+							<ul>
+								<li>Стабильность: курс sKZT всегда равен 1 KZT и не подвержен волатильности.
+								</li>
+								<li>Регулируемость: sKZT функционирует под контролем Нацбанка РК.</li>
+								<li>Прозрачность: Все выпущенные стейблкоины на 100% обеспечены резервами, что
+									подтверждается регулярными аудитами.</li>
+							</ul>
+						</div>
+					</details>
+
+					<details class="faq-question">
+						<summary class="question-name">
+							<h4 class="question-title">Где можно купить или продать sKZT?</h4>
+							<span class="question-icon"></span>
+						</summary>
+						<div class="faq-answer">
+							<p>Приобрести и продать sKZT можно через официальный онлайн-кошелек на сайте sanaly.kz. Для
+								этого достаточно
+								зарегистрироваться и использовать удобный интерфейс онлайн-кошелька.</p>
+						</div>
+					</details>
+
+					<details class="faq-question">
+						<summary class="question-name">
+							<h4 class="question-title">Что необходимо для регистрации в онлайн-кошельке?</h4>
+							<span class="question-icon"></span>
+						</summary>
+						<div class="faq-answer">
+							<p>Чтобы создать онлайн-кошелек, потребуется:
+							</p>
+							<ul>
+								<li>Гражданство / резидентство Казахстана</li>
+								<li>ИИН (индивидуальный идентификационный номер)</li>
+								<li>Действующий счет в казахстанском банке</li>
+							</ul>
+						</div>
+					</details>
+
+					<details class="faq-question">
+						<summary class="question-name">
+							<h4 class="question-title">Как обеспечивается стабильность курса 1:1?</h4>
+							<span class="question-icon"></span>
+						</summary>
+						<div class="faq-answer">
+							<p>Каждый sKZT обеспечен реальными тенге на счетах в регулируемых банках. Компания-эмитент
+								Sanaly Systems регулярно
+								публикует отчёты, подтверждающие 100% резервирование.</p>
+						</div>
+					</details>
+
+					<details class="faq-question">
+						<summary class="question-name">
+							<h4 class="question-title">Как я могу быть уверен, что эмитент не исчезнет с деньгами?</h4>
+							<span class="question-icon"></span>
+						</summary>
+						<div class="faq-answer">
+							<p>Sanaly Systems проходит регулярные аудиты и предоставляет публичные отчёты о резервах.
+								Кроме того, деятельность компании
+								контролируется Нацбанком Казахстана, что минимизирует риски.</p>
+						</div>
+					</details>
+
+					<details class="faq-question">
+						<summary class="question-name">
+							<h4 class="question-title">На каком блокчейне работает sKZT?</h4>
+							<span class="question-icon"></span>
+						</summary>
+						<div class="faq-answer">
+							<p>sKZT функционирует на блокчейне Ethereum, что обеспечивает высокий уровень безопасности и
+								прозрачности всех транзакций.</p>
+						</div>
+					</details>
+
+					<details class="faq-question">
+						<summary class="question-name">
+							<h4 class="question-title">Можно ли перевести sKZT на другой кошелек?</h4>
+							<span class="question-icon"></span>
+						</summary>
+						<div class="faq-answer">
+							<p>Да, sKZT поддерживает переводы на любые кошельки, совместимые с ERC-20 (например,
+								MetaMask, Trust Wallet и др.)</p>
+						</div>
+					</details>
+
+					<details class="faq-question">
+						<summary class="question-name">
+							<h4 class="question-title">Что делать, если я отправил sKZT на неправильный адрес?</h4>
+							<span class="question-icon"></span>
+						</summary>
+						<div class="faq-answer">
+							<p>К сожалению, блокчейн-транзакции необратимы. Рекомендуем всегда внимательно проверять
+								адрес получателя перед отправкой,
+								чтобы избежать ошибок.</p>
+						</div>
+					</details>
+
+					<details class="faq-question">
+						<summary class="question-name">
+							<h4 class="question-title">Как долго продлится первая волна использования sKZT?</h4>
+							<span class="question-icon"></span>
+						</summary>
+						<div class="faq-answer">
+							<p>Первая волна продлится до 31 марта 2026 года. После успешного завершения первой волны мы
+								планируем расширить круг
+								пользователей и добавить новые функции. Следите за нашими новостями и обновлениями на
+								сайте.</p>
+						</div>
+					</details>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="get">
+		<div class="container">
+			<div class="get-content c-c d-column">
+				<h2 class="title m-0">Свяжитесь с нами</h2>
+				<p class="get-descr">
+					Интересуетесь SKZT или есть вопросы? Ответим в ближайшее время
+				</p>
+				<a href="mailto:skzt@sanaly.kz" class="btn main">Связаться с нами</a>
+			</div>
+		</div>
+	</section>
+
+	<footer id="contacts" class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-head s-sb">
+					<a href="#top" class="logo c-s">
+						<img src="./img/skzt-logo.svg" fetchpriority="high" alt="sKZT logo">
+					</a>
+					<div class="contacts">
+						<div class="label">Email</div>
+						<div class="contuct-item">
+							<a href="mailto:skzt@sanaly.kz">skzt@sanaly.kz</a>
+						</div>
+					</div>
+				</div>
+				<div class="rights s-s">
+					<a href="#">Политика конфиденциальности</a>
+					<a href="#">Условия использования</a>
+					<a href="#">Согласие на обработку персональных данных</a>
+				</div>
+				<div class="copyright">© sKZT, 2025</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="./js/app.js"></script>
+</body>
+
+</html>
