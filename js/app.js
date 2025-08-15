@@ -63,6 +63,11 @@ var callback_loaded = function (element) {
    }
 };
 document.addEventListener("DOMContentLoaded", function (event) {
+   let header = document.querySelector(".header");
+   let mobBtn = document.querySelector(".mob-menu");
+   mobBtn.addEventListener("click", function (e) {
+      header.classList.toggle("active");
+   });
    document.body.classList.remove("loading");
    // slidetoggle
    let slideUp = (e, t = 500, s, d) => {
@@ -269,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
          VERSION: "translations_version",
       },
       CACHE_EXPIRATION_MS: 7 * 24 * 60 * 60 * 1000,
-      CURRENT_VERSION: "1.0.2",
+      CURRENT_VERSION: "2.0.3",
    };
 
    let currentTranslations = {};

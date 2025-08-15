@@ -1,0 +1,155 @@
+{
+   "html": {
+      "title": "SKZT - The First Regulated Stablecoin in Kazakhstan",
+      "curntLang": "Eng"
+   },
+   "nav": {
+      "links": {
+         "1": "Whitepaper",
+         "2": "Benefits",
+         "3": "Participation Application",
+         "4": "Partners",
+         "5": "FAQ",
+         "6": "Contacts"
+      },
+      "button": "Open Wallet"
+   },
+   "hero": {
+      "currency": "1 tenge",
+      "title": "The First Regulated Stablecoin in Kazakhstan",
+      "words": {
+         "1": "Reliability",
+         "2": "Stability",
+         "3": "Innovation"
+      },
+      "description": "A stablecoin pegged 1:1 to the tenge – your digital asset with guaranteed stability",
+      "button": "Become the First User"
+   },
+   "about": {
+      "title": "Compliance with the Highest Industry Standards",
+      "description": "In a world where cryptocurrencies are known for their volatility, we present Kazakhstan's first regulated stablecoin, fully backed by the national currency – the tenge. Each stablecoin equals 1 KZT, ensuring maximum predictability and security for your financial transactions."
+   },
+   "benefits": {
+      "title": "Key Features of SKZT",
+      "description": "Our goal is reliability, transparency, accessibility",
+      "button": "Become the First User",
+      "items": {
+         "1": {
+            "title": "Full 1:1 Backing",
+            "description": "Each token is backed by real tenge in regulated institutions"
+         },
+         "2": {
+            "title": "Speed and Convenience",
+            "description": "Instant transfers, low fees, and 24/7 availability without borders"
+         },
+         "3": {
+            "title": "Transparency and Reliability",
+            "description": "Regulatory oversight and audits – your money is safe"
+         },
+         "4": {
+            "title": "Legality and Regulation",
+            "description": "The first stablecoin under the supervision of the National Bank of Kazakhstan"
+         },
+         "5": {
+            "title": "Accessibility for Everyone",
+            "description": "Stablecoin transactions – just a few clicks in your wallet"
+         }
+      }
+   },
+   "testing": {
+      "title": "Applications for Participation in the First Wave of sKZT Usage",
+      "description": "Leave your contact details, and we will notify you about the launch date",
+      "data": "Applications accepted until 10/15/2025",
+      "button": "Become the First User",
+      "inputs": {
+         "1": {
+            "name": "Full Name"
+         },
+         "2": {
+            "name": "Phone Number"
+         },
+         "3": {
+            "name": "Email"
+         },
+         "4": {
+            "name": "I accept the terms"
+         },
+         "5": {
+            "name": "Submit"
+         }
+      }
+   },
+   "wallet": {
+      "tag": "Wallet",
+      "title": "Open a Wallet with sKZT – Fast and Easy",
+      "description": "To open a wallet, you will need:",
+      "items": {
+         "1": {
+            "name": "Be a resident of Kazakhstan"
+         },
+         "2": {
+            "name": "Have an IIN and a bank account"
+         }
+      },
+      "button": "Available from 11/15"
+   },
+   "partners": {
+      "title": "In Partnership With"
+   },
+   "faq": {
+      "tag": "FAQ",
+      "title": "Frequently Asked Questions",
+      "description": "Answers to questions about sKZT",
+      "questions": {
+         "1": {
+            "name": "What is sKZT?",
+            "answer": "<p>sKZT is a stablecoin pegged to the rate of 1 Kazakhstani tenge (KZT). It is backed by reserves in fiat currency (KZT) and issued under regulatory supervision within the 'regulatory sandbox'.</p>"
+         },
+         "2": {
+            "name": "How is sKZT different from other cryptocurrencies?",
+            "answer": "<p><ul><li>Stability: The sKZT rate is always equal to 1 KZT and is not subject to volatility.</li><li>Regulation: sKZT operates under the supervision of the National Bank of Kazakhstan.</li><li>Transparency: All issued stablecoins are 100% backed by reserves, confirmed by regular audits.</li></ul></p>"
+         },
+         "3": {
+            "name": "Where can I buy or sell sKZT?",
+            "answer": "<p>You can purchase and sell sKZT through the official online wallet on sanaly.kz. To do this, simply register and use the convenient online wallet interface.</p>"
+         },
+         "4": {
+            "name": "What is needed to register for an online wallet?",
+            "answer": "<p>To create an online wallet, you will need:</p><ul><li>Kazakhstani citizenship/residency</li><li>IIN (Individual Identification Number)</li><li>An active bank account in a Kazakhstani bank</li></ul>"
+         },
+         "5": {
+            "name": "Can I exchange sKZT back to tenge?",
+            "answer": "<p>Yes, at any time you can exchange 1 sKZT = 1 KZT through the online wallet.</p>"
+         },
+         "6": {
+            "name": "How is the 1:1 exchange rate stability ensured?",
+            "answer": "<p>Each sKZT is backed by real tenge in accounts at regulated banks. The issuing company, Sanaly Systems, regularly publishes reports confirming 100% reserve backing.</p>"
+         },
+         "7": {
+            "name": "How can I be sure the issuer won't disappear with the money?",
+            "answer": "<p>Sanaly Systems undergoes regular audits and provides public reports on reserves. Additionally, the company's activities are supervised by the National Bank of Kazakhstan, minimizing risks.</p>"
+         },
+         "8": {
+            "name": "Which blockchain does sKZT operate on?",
+            "answer": "<p>sKZT operates on the Ethereum blockchain, ensuring a high level of security and transparency for all transactions.</p>"
+         },
+         "9": {
+            "name": "Can I transfer sKZT to another wallet?",
+            "answer": "<p>Yes, sKZT supports transfers to any ERC-20 compatible wallets (e.g., MetaMask, Trust Wallet, etc.).</p>"
+         },
+         "10": {
+            "name": "What should I do if I sent sKZT to the wrong address?",
+            "answer": "<p>Unfortunately, blockchain transactions are irreversible. We recommend always double-checking the recipient's address before sending to avoid mistakes.</p>"
+         },
+         "11": {
+            "name": "How long will the first wave of sKZT usage last?",
+            "answer": "<p>The first wave will last until March 31, 2026. After the successful completion of the first wave, we plan to expand the user base and add new features. Stay tuned for updates on our website.</p>"
+         }
+      }
+   },
+   "get": {
+      "title": "Contact Us",
+      "description": "Interested in SKZT or have questions? We'll respond as soon as possible",
+      "button": "Contact Us"
+   }
+}
