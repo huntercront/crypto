@@ -23,7 +23,11 @@
          "3": "Innovation"
       },
       "description": "A stablecoin pegged 1:1 to the tenge – your digital asset with guaranteed stability",
-      "button": "Become the First User"
+      "button": "Become the First User",
+      "charts": {
+         "1": "sKZT in circulation",
+         "2": "Reserve amount"
+      }
    },
    "about": {
       "title": "Compliance with the Highest Industry Standards",
