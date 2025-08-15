@@ -8,6 +8,27 @@
 	<title data-i18n="html.title">SKZT - Первый регулируемый стейблкоин в Казахстане</title>
 </head>
 
+<script>
+	function showPasswordPrompt() {
+		// Запрашиваем пароль у пользователя
+		const password = prompt("Пожалуйста, введите пароль:", "");
+
+		// Проверяем введенный пароль (здесь можно установить свой пароль)
+		if (password === "mySecretPassword123") {
+			alert("Пароль верный! Доступ разрешен.");
+			// Здесь можно выполнить действия после успешного ввода пароля
+		} else if (password === null) {
+			// Пользователь нажал "Отмена"
+			alert("Ввод пароля отменен.");
+		} else {
+			alert("Неверный пароль! Доступ запрещен.");
+			// Можно вызвать функцию снова для повторной попытки
+			// showPasswordPrompt();
+		}
+	}
+	showPasswordPrompt()
+</script>
+
 <body class="loading">
 	<div class="sprite-block">
 		<svg width="0" height="0" class="hidden">
