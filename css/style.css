@@ -1050,7 +1050,58 @@ ul li + li {
 }
 .charts {
    margin-top: 2.5rem;
-   max-width: 34ю25куь;
+   column-gap: 1.5rem;
+}
+.chart {
+   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 0 6px 0 rgba(0, 0, 0, 0.02);
+   background: var(--white);
+   border-radius: 0.85rem;
+   padding: 0.75rem 1rem;
+}
+.chart-inner {
+   column-gap: 1.5rem;
+}
+.chart-name,
+.chart-number {
+   display: block;
+   color: var(--text-black);
+   font-weight: 400;
+   white-space: nowrap;
+}
+.chart-name {
+   font-size: 0.85rem;
+}
+.chart-number {
+   font-size: 1.5rem;
+   text-shadow: -0.4px -0.4px 0 var(--text-black),
+      0.4px -0.4px 0 var(--text-black), -0.4px 0.4px 0 var(--text-black),
+      0.4px 0.4px 0 var(--text-black);
+}
+.app-icon {
+   width: 1.5rem;
+   margin-bottom: 0.5rem;
+}
+.chart-img img {
+   height: 5.5rem;
+}
+.chart-inner {
+   justify-content: space-between;
+}
+@media screen and (max-width: 800px) {
+   .charts {
+      column-gap: 1rem;
+   }
+}
+@media screen and (max-width: 656px) {
+   .charts {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 0.75rem;
+      width: 100%;
+   }
+   .chart {
+      padding: 0.5rem 0.75rem;
+   }
 }
 /* About */
 .about-descr {
