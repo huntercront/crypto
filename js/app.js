@@ -48,7 +48,7 @@ Loader.prototype = {
 };
 
 var l = new Loader();
-l.require(["../js/lazy.js"], function () {
+l.require(["./js/lazy.js"], function () {
    lazy = new LazyLoad({
       elements_selector: ".lazy",
       callback_loaded: callback_loaded,
@@ -288,7 +288,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             `Fetching fresh v${TRANSLATION_CONFIG.CURRENT_VERSION} translations for ${lang}`
          );
          const response = await fetch(
-            `../lang/${lang}.json?v=${TRANSLATION_CONFIG.CURRENT_VERSION}`
+            `./lang/${lang}.json?v=${TRANSLATION_CONFIG.CURRENT_VERSION}`
          );
          const translations = await response.json();
          saveTranslationsToCache(lang, translations);
