@@ -402,7 +402,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
             if (element.classList.contains("faq-answer")) {
                element.innerHTML = value;
             }
-            console.log(element.closest(".input.submit"));
          }
 
          element.classList.remove("fade-out");
