@@ -31,16 +31,16 @@
    },
    "about": {
       "title": "Compliance with the Highest Industry Standards",
-      "description": "In a world where cryptocurrencies are known for their volatility, we present Kazakhstan's first regulated stablecoin, fully backed by the national currency – the tenge. Each stablecoin equals 1 KZT, ensuring maximum predictability and security for your financial transactions."
+      "description": "In the world where cryptocurrencies are often associated with volatility, we introduce Kazakhstan's first regulated stablecoin, fully backed by the national currency – the tenge. Each token is pegged 1:1 to KZT, delivering maximum stability, transparency, and security for your financial transactions."
    },
    "benefits": {
       "title": "Key Features of SKZT",
-      "description": "Our goal is reliability, transparency, accessibility",
+      "description": "Our mission is to deliver reliability, ensure transparency, and provide accessibility for everyone",
       "button": "Become the First User",
       "items": {
          "1": {
             "title": "Full 1:1 Backing",
-            "description": "Each token is backed by real tenge in regulated institutions"
+            "description": "Each token is fully backed by real tenge held in regulated financial institutions"
          },
          "2": {
             "title": "Speed and Convenience",
@@ -48,7 +48,7 @@
          },
          "3": {
             "title": "Transparency and Reliability",
-            "description": "Regulatory oversight and audits – your money is safe"
+            "description": "Regulatory oversight and audits – our funds are always secure"
          },
          "4": {
             "title": "Legality and Regulation",
@@ -56,7 +56,7 @@
          },
          "5": {
             "title": "Accessibility for Everyone",
-            "description": "Stablecoin transactions – just a few clicks in your wallet"
+            "description": "Stablecoin transactions in just a few clicks, right from your wallet"
          }
       }
    },
@@ -111,15 +111,15 @@
          },
          "2": {
             "name": "How is sKZT different from other cryptocurrencies?",
-            "answer": "<p><ul><li>Stability: The sKZT rate is always equal to 1 KZT and is not subject to volatility.</li><li>Regulation: sKZT operates under the supervision of the National Bank of Kazakhstan.</li><li>Transparency: All issued stablecoins are 100% backed by reserves, confirmed by regular audits.</li></ul></p>"
+            "answer": "<p><ul><li>Stability: sKZT is always pegged 1:1 to the Kazakhstani tenge (KZT), eliminating typical cryptocurrency volatility.</li><li>Regulation: sKZT operates under the oversight of the National Bank of Kazakhstan.</li><li>Transparency: Every issued stablecoin is 100% backed by reserves, verified through regular audits.</li></ul></p>"
          },
          "3": {
             "name": "Where can I buy or sell sKZT?",
             "answer": "<p>You can purchase and sell sKZT through the official online wallet on sanaly.kz. To do this, simply register and use the convenient online wallet interface.</p>"
          },
          "4": {
-            "name": "What is needed to register for an online wallet?",
-            "answer": "<p>To create an online wallet, you will need:</p><ul><li>Kazakhstani citizenship/residency</li><li>IIN (Individual Identification Number)</li><li>An active bank account in a Kazakhstani bank</li></ul>"
+            "name": "What is needed to register for an online sKZT wallet?",
+            "answer": "<p>Opening your wallet is simple. All you need is:</p><ul><li>Kazakhstani citizenship or residency</li><li>IIN (Individual Identification Number)</li><li>An active bank account in Kazakhstan</li></ul>"
          },
          "5": {
             "name": "Can I exchange sKZT back to tenge?",
@@ -130,8 +130,8 @@
             "answer": "<p>Each sKZT is backed by real tenge in accounts at regulated banks. The issuing company, Sanaly Systems, regularly publishes reports confirming 100% reserve backing.</p>"
          },
          "7": {
-            "name": "How can I be sure the issuer won't disappear with the money?",
-            "answer": "<p>Sanaly Systems undergoes regular audits and provides public reports on reserves. Additionally, the company's activities are supervised by the National Bank of Kazakhstan, minimizing risks.</p>"
+            "name": "How can I be sure the issuer won’t disappear with the money?",
+            "answer": "<p>Sanaly Systems is supervised by the National Bank of Kazakhstan, ensuring full regulatory compliance. The company undergoes regular audits and publishes public reports on reserves, minimizing risks and guaranteeing transparency.</p>"
          },
          "8": {
             "name": "Which blockchain does sKZT operate on?",
@@ -142,18 +142,18 @@
             "answer": "<p>Yes, sKZT supports transfers to any ERC-20 compatible wallets (e.g., MetaMask, Trust Wallet, etc.).</p>"
          },
          "10": {
-            "name": "What should I do if I sent sKZT to the wrong address?",
-            "answer": "<p>Unfortunately, blockchain transactions are irreversible. We recommend always double-checking the recipient's address before sending to avoid mistakes.</p>"
+            "name": "What if I accidentally send sKZT to the wrong address?",
+            "answer": "<p>Unfortunately, blockchain transactions are irreversible. We recommend always double-check the recipient’s address before confirming any transfer to avoid mistakes.</p>"
          },
          "11": {
             "name": "How long will the first wave of sKZT usage last?",
-            "answer": "<p>The first wave will last until March 31, 2026. After the successful completion of the first wave, we plan to expand the user base and add new features. Stay tuned for updates on our website.</p>"
+            "answer": "<p>The first wave will run until March 31, 2026. After its successful completion, we plan to expand the user base and introduce new features. Follow updates on our website.</p>"
          }
       }
    },
    "get": {
       "title": "Contact Us",
-      "description": "Interested in SKZT or have questions? We'll respond as soon as possible",
+      "description": "Want to learn more about sKZT? Contact us — our team will respond promptly",
       "button": "Contact Us"
    }
 }

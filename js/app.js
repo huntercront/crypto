@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
          VERSION: "translations_version",
       },
       CACHE_EXPIRATION_MS: 7 * 24 * 60 * 60 * 1000,
-      CURRENT_VERSION: "3.0.1",
+      CURRENT_VERSION: "2.2.1",
    };
 
    let currentTranslations = {};
@@ -391,7 +391,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
          if (value) {
             if (element.getAttribute("data-type")) {
                element.setAttribute("data-type", value);
-               intitPrint(element);
             } else if (
                element.tagName === "INPUT" ||
                element.tagName === "TEXTAREA"
@@ -403,6 +402,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             if (element.classList.contains("faq-answer")) {
                element.innerHTML = value;
             }
+            console.log(element.closest(".input.submit"));
          }
 
          element.classList.remove("fade-out");

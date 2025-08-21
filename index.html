@@ -8,7 +8,7 @@
 	<title data-i18n="html.title">SKZT - Первый регулируемый стейблкоин в Казахстане</title>
 </head>
 
-<script>
+<!-- <script>
 	function showPasswordPrompt() {
 		// Запрашиваем пароль у пользователя
 		const password = prompt("Пожалуйста, введите пароль:", "");
@@ -28,7 +28,7 @@
 		}
 	}
 	showPasswordPrompt()
-</script>
+</script> -->
 
 <body class="loading">
 	<div class="sprite-block">
@@ -325,23 +325,24 @@
 					<div class="form">
 						<form class="form">
 							<div class="input text">
-								<input type="text" placeholder="ФИО (полностью)" name="name" autocomplete="name"
-									required />
+								<input type="text" data-i18n="testing.inputs.1.name" placeholder="ФИО (полностью)"
+									name="name" autocomplete="name" required />
 							</div>
 							<div class="input text">
-								<input type="tel" placeholder="Номер телефона" name="tel" autocomplete="tel" required />
+								<input type="tel" data-i18n="testing.inputs.2.name" placeholder="Номер телефона"
+									name="tel" autocomplete="tel" required />
 							</div>
 							<div class="input text">
-								<input type="email" placeholder="Электронная почта" name="email" autocomplete="email"
-									required />
+								<input type="email" data-i18n="testing.inputs.3.name" placeholder="Электронная почта"
+									name="email" autocomplete="email" required />
 							</div>
 							<label class="input checkbox">
 								<input type="checkbox" id="conditions" name="confirm" checked />
 								<span class="mark"></span>
-								<span class="like-label" data-i18n="testing.inputs.4">Я принимаю условия</span>
+								<span class="like-label" data-i18n="testing.inputs.4.name">Я принимаю условия</span>
 							</label>
 							<div class="input submit">
-								<input type="submit" class="btn main" value="Отправить" />
+								<button data-i18n="testing.inputs.5.name" class="btn main">Отправить</button>
 							</div>
 						</form>
 					</div>

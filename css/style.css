@@ -626,8 +626,9 @@ section + section {
 .input.submit {
    padding-top: 0.5rem;
 }
-.input.submit input {
+.input.submit .btn.main {
    width: 100%;
+   display: block;
 }
 /* lang swap */
 [data-i18n] {
