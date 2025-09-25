@@ -162,5 +162,11 @@
     "title": "Contact Us",
     "description": "Want to learn more about sKZT? Contact us — our team will respond promptly",
     "button": "Contact Us"
+  },
+  "footer": {
+    "links": {
+      "1": "Privacy Policy",
+      "2": "Terms of Use"
+    }
   }
 }

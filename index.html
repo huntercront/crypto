@@ -336,7 +336,7 @@
 							</div>
 							<div class="input text">
 								<input type="email" data-i18n="testing.inputs.3.name" placeholder="Электронная почта"
-									name="email" autocomplete="email" required />
+									name="email" autocomplete="email" pattern="^\S+@\S+\.\S+$" required />
 							</div>
 							<label class="input checkbox">
 								<input type="checkbox" id="conditions" name="confirm" checked />
@@ -671,9 +671,8 @@
 					</div>
 				</div>
 				<div class="rights s-s">
-					<a href="#">Политика конфиденциальности</a>
-					<a href="#">Условия использования</a>
-					<a href="#">Согласие на обработку персональных данных</a>
+					<a href="#" data-i18n="footer.links.1">Политика конфиденциальности</a>
+					<a href="#" data-i18n="footer.links.2">Условия использования</a>
 				</div>
 				<div class="copyright">© sKZT, 2025</div>
 			</div>

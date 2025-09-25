@@ -1,84 +1,85 @@
-const input = document.querySelector("input[type='email']");
+class EmailMask {
+  constructor(inputId) {
+    this.input = document.querySelector(inputId);
+    this.lastValidValue = "";
 
-// Оставляет только латиницу, цифры, точку и @, убирает лишние @
-function sanitize(str) {
-  let atSeen = false;
-  return str
-    .split("")
-    .filter((ch) => {
-      if (/^[A-Za-z0-9]$/.test(ch) || ch === ".") {
-        return true;
+    this.init();
+  }
+  init() {
+    this.input.addEventListener("input", this.handleInput.bind(this));
+    this.input.addEventListener("keydown", this.handleKeydown.bind(this));
+  }
+  handleInput(event) {
+    let value = event.target.value;
+    const cursorPosition = event.target.selectionStart;
+    value = value.replace(/[^a-zA-Z0-9@.]/g, "");
+    const atCount = (value.match(/@/g) || []).length;
+    if (atCount > 1) {
+      const firstAt = value.indexOf("@");
+      value =
+        value.substring(0, firstAt + 1) +
+        value.substring(firstAt + 1).replace(/@/g, "");
+    }
+    const atIndex = value.indexOf("@");
+    let leftPart = atIndex === -1 ? value : value.substring(0, atIndex);
+    let rightPart = atIndex === -1 ? "" : value.substring(atIndex + 1);
+    if (leftPart.length >= 14 && atIndex === -1 && !value.includes("@")) {
+      leftPart = value.substring(0, 14);
+      rightPart = value.substring(14);
+      value = leftPart + "@" + rightPart;
+    }
+    if (rightPart) {
+      rightPart = rightPart.replace(/\.+/g, ".");
+      const dotIndex = rightPart.indexOf(".");
+      if (dotIndex === -1 && rightPart.length > 5) {
+        rightPart = rightPart.substring(0, 5) + "." + rightPart.substring(5);
       }
-      if (ch === "@") {
-        if (!atSeen) {
-          atSeen = true;
-          return true;
+      const lastDotIndex = rightPart.lastIndexOf(".");
+      if (lastDotIndex !== -1) {
+        const domainZone = rightPart.substring(lastDotIndex + 1);
+        if (domainZone.length > 4) {
+          rightPart =
+            rightPart.substring(0, lastDotIndex + 1) +
+            domainZone.substring(0, 4);
         }
       }
-      return false;
-    })
-    .join("");
-}
-
-function formatEmail(raw) {
-  let s = sanitize(raw);
-  const atIndex = s.indexOf("@");
-
-  if (atIndex === -1) {
-    if (s.length > 10) {
-      s = s.slice(0, 10) + "@" + s.slice(10);
+      value = leftPart + "@" + rightPart;
     }
-    return s;
+    this.input.value = value;
+    const newCursorPosition = this.calculateNewCursorPosition(
+      event.target.value,
+      value,
+      cursorPosition
+    );
+    event.target.setSelectionRange(newCursorPosition, newCursorPosition);
+
+    this.lastValidValue = value;
   }
-
-  // Разбиваем на левую и правую части (до и после @)
-  let left = s.slice(0, atIndex);
-  let right = s.slice(atIndex + 1);
-
-  if (!right.includes(".") && right.length > 5) {
-    right = right.slice(0, 5) + "." + right.slice(5);
+  handleKeydown(event) {
+    if (event.ctrlKey || event.altKey || event.metaKey) {
+      return;
+    }
+    if (event.key.length === 1 && !/^[a-zA-Z0-9@.]$/.test(event.key)) {
+      event.preventDefault();
+    }
   }
+  calculateNewCursorPosition(oldValue, newValue, oldCursorPosition) {
+    if (oldValue === newValue) {
+      return oldCursorPosition;
+    }
+    let diff = 0;
+    const minLength = Math.min(oldValue.length, newValue.length);
 
-  if (right.includes(".")) {
-    const dotPos = right.indexOf(".");
-    let domainName = right.slice(0, dotPos);
-    let ext = right.slice(dotPos + 1);
-
-    ext = ext.replace(/[^A-Za-z]/g, "").slice(0, 4);
-    right = domainName + (ext ? "." + ext : "");
-  } else {
-    // Доменное имя пока что без точки
-    right = right.replace(/[^A-Za-z0-9]/g, "");
+    for (let i = 0; i < minLength; i++) {
+      if (i >= oldCursorPosition) break;
+      if (oldValue[i] !== newValue[i]) {
+        diff++;
+      }
+    }
+    return Math.max(0, Math.min(newValue.length, oldCursorPosition + diff));
   }
-
-  return left + "@" + right;
 }
-
-// Сохраняет позицию курсора
-function setCursor(el, pos) {
-  requestAnimationFrame(() => {
-    el.setSelectionRange(pos, pos);
-  });
-}
-
-input.addEventListener("input", (e) => {
-  const el = e.target;
-  const oldVal = el.value;
-  const oldPos = el.selectionStart;
-  const newVal = formatEmail(oldVal);
-
-  el.value = newVal;
-  // корректируем позицию курсора
-  const diff = newVal.length - oldVal.length;
-  setCursor(el, oldPos + diff);
-});
-
-input.addEventListener("keypress", (e) => {
-  // запрещаем ввод недопустимых символов
-  if (!/^[A-Za-z0-9@.]$/.test(e.key)) {
-    e.preventDefault();
-  }
-});
+new EmailMask("input[type='email']");
 
 // mask-input-phones
 const prefixNumber = (str) => {
@@ -124,4 +125,31 @@ phonesInput.addEventListener("input", (e) => {
     result += value[i];
   }
   phonesInput.value = result;
+});
+
+let submitBtn = document.querySelector(".input.submit button");
+let checkBoxes = document.querySelectorAll(".input.checkbox input");
+
+function areAllCheckboxesChecked(checkBoxes) {
+  let allChecked = true;
+  if (checkBoxes.length === 0) {
+    return false;
+  }
+  checkBoxes.forEach((checkbox) => {
+    if (!checkbox.checked) {
+      allChecked = false;
+    }
+  });
+  return allChecked;
+}
+
+checkBoxes.forEach((checkBox) => {
+  checkBox.addEventListener("input", function (e) {
+    console.log(checkBox.checked);
+    if (areAllCheckboxesChecked(checkBoxes) == false) {
+      submitBtn.disabled = true;
+    } else {
+      submitBtn.disabled = false;
+    }
+  });
 });

@@ -640,6 +640,11 @@ section + section {
   width: 100%;
   display: block;
 }
+.input.submit .btn.main:disabled,
+.input.submit .btn.main:disabled:hover {
+  background: #cfd8dc;
+  cursor: not-allowed;
+}
 /* lang swap */
 [data-i18n] {
   transition: opacity 250ms ease;
@@ -755,6 +760,7 @@ ul li + li {
   transition: 250ms ease-in;
   transition-property: none;
   background: var(--white);
+  border: none;
 }
 .btn.main {
   transition-property: background;
