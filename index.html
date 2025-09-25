@@ -6,6 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/style.css">
 	<title data-i18n="html.title">SKZT - Первый регулируемый стейблкоин в Казахстане</title>
+
+	<link rel="icon" type="image/png" href="./fav/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="./fav/favicon.svg" />
+	<link rel="shortcut icon" href="./fav/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="SKZT" />
+	<link rel="manifest" href="./fav/site.webmanifest" />
 </head>
 
 <script>
@@ -192,6 +199,10 @@
 						<source type="image/jpeg" data-srcset="./img/about-img.jpg 1x, ./img/about-img2x.jpg 2x">
 						<img class="lazy" data-src="./img/about-img.jpg" alt="" width="620" height="445">
 					</picture>
+
+					<div class="balance-info lazy-img lazy-progress">
+						<img class="lazy" data-src="./img/balance.svg" alt="logo" width="273" height="40">
+					</div>
 				</div>
 				<div class="about-comtent">
 					<div class="tag tag-sm">
@@ -333,6 +344,13 @@
 								<span class="like-label" data-i18n="testing.inputs.4.agreement">Я согласен на
 									обработку <a href="#" target="_blank">персональных
 										данных</a></span>
+							</label>
+
+							<label class="input checkbox">
+								<input type="checkbox" id="information" name="information" checked />
+								<span class="mark"></span>
+								<span class="like-label" data-i18n="testing.inputs.6.name">Я согласен по получение
+									информационных и маркетинговых рассылок</span>
 							</label>
 							<div class="input submit">
 								<button data-i18n="testing.inputs.5.name" class="btn main">Отправить</button>

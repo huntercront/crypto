@@ -1,50 +1,83 @@
-// mask-input email
-const formatEmail = (str) => {
-  if (str.includes("@")) {
-    return str; // уже есть @, не меняем
-  }
-  if (str.length > 3 && !str.includes("@")) {
-    return str + "@"; // автоматически добавляем @ после 3 символов
-  }
-  return str;
-};
+const input = document.querySelector("input[type='email']");
 
-let emailInput = document.querySelector("input[type='email']");
-emailInput.addEventListener("input", (e) => {
-  const value = emailInput.value;
+// Оставляет только латиницу, цифры, точку и @, убирает лишние @
+function sanitize(str) {
+  let atSeen = false;
+  return str
+    .split("")
+    .filter((ch) => {
+      if (/^[A-Za-z0-9]$/.test(ch) || ch === ".") {
+        return true;
+      }
+      if (ch === "@") {
+        if (!atSeen) {
+          atSeen = true;
+          return true;
+        }
+      }
+      return false;
+    })
+    .join("");
+}
 
-  let result = value;
+function formatEmail(raw) {
+  let s = sanitize(raw);
+  const atIndex = s.indexOf("@");
 
-  // Удаляем лишние символы @ (оставляем только первый)
-  const atCount = (value.match(/@/g) || []).length;
-  if (atCount > 1) {
-    result = value.replace(/@/g, "");
-    const firstAtPosition = value.indexOf("@");
-    if (firstAtPosition !== -1) {
-      result =
-        value.substring(0, firstAtPosition) +
-        "@" +
-        value.substring(firstAtPosition + 1).replace(/@/g, "");
+  if (atIndex === -1) {
+    if (s.length > 10) {
+      s = s.slice(0, 10) + "@" + s.slice(10);
     }
+    return s;
   }
 
-  if (
-    result.includes("@") &&
-    !result.includes(".") &&
-    result.length > result.indexOf("@") + 3
-  ) {
-    const atPosition = result.indexOf("@");
-    const domainPart = result.substring(atPosition + 1);
-    if (domainPart.length > 0 && !domainPart.includes(".")) {
-      result = result + ".com";
-      // Устанавливаем курсор перед .com для удобства редактирования
-      setTimeout(() => {
-        emailInput.setSelectionRange(result.length - 4, result.length - 4);
-      }, 0);
-    }
+  // Разбиваем на левую и правую части (до и после @)
+  let left = s.slice(0, atIndex);
+  let right = s.slice(atIndex + 1);
+
+  if (!right.includes(".") && right.length > 5) {
+    right = right.slice(0, 5) + "." + right.slice(5);
   }
 
-  emailInput.value = result;
+  if (right.includes(".")) {
+    const dotPos = right.indexOf(".");
+    let domainName = right.slice(0, dotPos);
+    let ext = right.slice(dotPos + 1);
+
+    ext = ext.replace(/[^A-Za-z]/g, "").slice(0, 4);
+    right = domainName + (ext ? "." + ext : "");
+  } else {
+    // Доменное имя пока что без точки
+    right = right.replace(/[^A-Za-z0-9]/g, "");
+  }
+
+  return left + "@" + right;
+}
+
+// Сохраняет позицию курсора
+function setCursor(el, pos) {
+  requestAnimationFrame(() => {
+    el.setSelectionRange(pos, pos);
+  });
+}
+
+input.addEventListener("input", (e) => {
+  const el = e.target;
+  const oldVal = el.value;
+  const oldPos = el.selectionStart;
+  const newVal = formatEmail(oldVal);
+
+  el.value = newVal;
+  // корректируем позицию курсора
+  const diff = newVal.length - oldVal.length;
+  setCursor(el, oldPos + diff);
+});
+
+input.addEventListener("keypress", (e) => {
+  // запрещаем ввод недопустимых символов
+  if (!/^[A-Za-z0-9@.]$/.test(e.key)) {
+    e.preventDefault();
+  }
 });
 
 // mask-input-phones
