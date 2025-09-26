@@ -1,6 +1,6 @@
 {
   "html": {
-    "title": "SKZT - The First Regulated Stablecoin in Kazakhstan",
+    "title": "sKZT - The First Regulated Stablecoin in Kazakhstan",
     "curntLang": "Eng"
   },
   "nav": {
@@ -26,15 +26,20 @@
     "button": "Become the First User",
     "charts": {
       "1": "sKZT in circulation",
-      "2": "Reserve amount"
+      "2": {
+        "name": "Reserve amount",
+        "figcaption": "total"
+      },
+      "description": "The project is scheduled for launch in November 2025"
     }
   },
   "about": {
     "title": "Compliance with the Highest Industry Standards",
-    "description": "In the world where cryptocurrencies are often associated with volatility, we introduce Kazakhstan's first regulated stablecoin, fully backed by the national currency – the tenge. Each token is pegged 1:1 to KZT, delivering maximum stability, transparency, and security for your financial transactions."
+    "description": "In the world where cryptocurrencies are often associated with volatility, we introduce Kazakhstan's first regulated stablecoin, fully backed by the national currency – the tenge. Each token is pegged 1:1 to KZT, delivering maximum stability, transparency, and security for your financial transactions.",
+    "currency": "1 tenge"
   },
   "benefits": {
-    "title": "Key Features of SKZT",
+    "title": "Key Features of sKZT",
     "description": "Our mission is to deliver reliability, ensure transparency, and provide accessibility for everyone",
     "button": "Become the First User",
     "items": {
@@ -88,17 +93,18 @@
   },
   "wallet": {
     "tag": "Wallet",
-    "title": "Only a passport is required to open a wallet",
-    "description": "Requirements for buying sKZT with KZT:",
+    "title": "Only a passport is needed to open a wallet",
+    "subtitle": "Cryptocurrency operations are available to all users",
+    "description": "To buy sKZT for KZT, you need to:",
     "items": {
       "1": {
-        "name": "Be a citizen of Kazakhstan (resident)"
+        "name": "Be a citizen of the Republic of Kazakhstan"
       },
       "2": {
-        "name": "Be a Halyk Bank customer with an active bank account"
+        "name": "Be a customer of Halyk Bank and have an active bank account"
       }
     },
-    "button": "Available from 11/15"
+    "button": "Available from Nov 15"
   },
   "partners": {
     "title": "In Partnership With"
@@ -126,7 +132,7 @@
       },
       "5": {
         "name": "Can I exchange sKZT back to tenge?",
-        "answer": "<p>Yes, at any time you can exchange 1 sKZT = 1 KZT through the online wallet.</p>"
+        "answer": "<p>Yes, at any time, you can exchange 1 sKZT = 1 KZT through an online wallet if you are a resident of the Republic of Kazakhstan with an active bank account in Halyk Bank.</p>"
       },
       "6": {
         "name": "How is the 1:1 exchange rate stability ensured?",

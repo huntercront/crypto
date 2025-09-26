@@ -5,17 +5,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/style.css">
-	<title data-i18n="html.title">SKZT - Первый регулируемый стейблкоин в Казахстане</title>
+	<title data-i18n="html.title">sKZT - Первый регулируемый стейблкоин в Казахстане</title>
 
 	<link rel="icon" type="image/png" href="./fav/favicon-96x96.png" sizes="96x96" />
 	<link rel="icon" type="image/svg+xml" href="./fav/favicon.svg" />
 	<link rel="shortcut icon" href="./fav/favicon.ico" />
 	<link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png" />
-	<meta name="apple-mobile-web-app-title" content="SKZT" />
+	<meta name="apple-mobile-web-app-title" content="sKZT" />
 	<link rel="manifest" href="./fav/site.webmanifest" />
 </head>
 
-<script>
+<!-- <script>
 	function showPasswordPrompt() {
 		// Запрашиваем пароль у пользователя
 		const password = prompt("Пожалуйста, введите пароль:", "");
@@ -35,7 +35,7 @@
 		}
 	}
 	showPasswordPrompt()
-</script>
+</script> -->
 
 <body class="loading">
 	<div class="sprite-block">
@@ -69,7 +69,7 @@
 		<div class="container">
 			<div class="header-content c-sb">
 				<a href="#top" class="logo c-s">
-					<img src="./img/skzt-logo.svg" fetchpriority="high" alt="sKZT logo">
+					<img src="./img/sKZT-logo.svg" fetchpriority="high" alt="sKZT logo">
 				</a>
 				<div class="nav-wrap c-s">
 					<nav class="nav no-list">
@@ -137,7 +137,7 @@
 				</div>
 				<div class="hero-content c-c">
 					<div class="tag">
-						<span>1 SKZT</span>
+						<span class="like-write">1 sKZT</span>
 						<div class="icon icon-18">
 							<svg>
 								<use xlink:href="#equals"></use>
@@ -166,10 +166,10 @@
 								<div class="chart-text">
 									<img class="app-icon" src="./img/logo-icon.svg" alt="logo" width="20" height="20">
 									<span class="chart-name" data-i18n="hero.charts.1">sKZT в обороте</span>
-									<span class="chart-number">200 000 ₸</span>
+									<span class="chart-number hidden-number"></span>
 								</div>
 								<div class="chart-img c-c">
-									<img src="./img/chart-line.svg" alt="">
+									<img src="./img/chart-line.svg" alt="chart" width="143" height="88">
 								</div>
 							</div>
 						</div>
@@ -178,14 +178,22 @@
 							<div class="chart-inner c-c">
 								<div class="chart-text">
 									<img class="app-icon" src="./img/logo-icon.svg" alt="logo" width="20" height="20">
-									<span class="chart-name" data-i18n="hero.charts.2">Сумма резервов</span>
-									<span class="chart-number">300 000 ₸</span>
+									<span class="chart-name" data-i18n="hero.charts.2.name">Сумма резервов</span>
+									<span class="chart-number hidden-number"></span>
 								</div>
 								<div class="chart-img c-c">
-									<img src="./img/chart-round.svg" alt="">
+									<img src="./img/chart-round.svg" alt="chart" width="88" height="88">
+									<div class="figcaption c-c d-column">
+										<img src="./img/logo-icon.svg" alt="icon" width="">
+										<span class="name" data-i18n="hero.charts.2.figcaption">всего</span>
+										<span class="total hidden-number"></span>
+									</div>
 								</div>
 							</div>
 						</div>
+						<span class="chart-descr" data-i18n="hero.charts.description">Запуск проекта ожидается в ноябре
+							2025 года</span>
+
 					</div>
 				</div>
 			</div>
@@ -200,23 +208,29 @@
 						<img class="lazy" data-src="./img/about-img.jpg" alt="" width="620" height="445">
 					</picture>
 
-					<div class="balance-info lazy-img lazy-progress">
-						<img class="lazy" data-src="./img/balance.svg" alt="logo" width="273" height="40">
+					<div class="balance-info c-s">
+						<div class="balance-icon lazy-img lazy-progress">
+							<img class="lazy" data-src="./img/logo-icon.svg" alt="b-icon" width="40" height="40">
+						</div>
+						<span class="like-write">1 sKZT</span>
+						<span>=</span>
+						<div class="balance-icon lazy-img lazy-progress">
+							<img class="lazy" data-src="./img/b-02.svg" alt="b-icon" width="40" height="40">
+						</div>
+						<span data-i18n="about.currency">1 тенге</span>
 					</div>
 				</div>
 				<div class="about-comtent">
 					<div class="tag tag-sm">
-						<span>skzt</span>
+						<span class="like-write">sKZT</span>
 					</div>
 					<h2 class="title" data-i18n="about.title">Cоответствие самым высоким стандартам отрасли</h2>
-					<p class="m-0 f-18 about-descr" data-i18n="about.description">В мире, где криптовалюты известны
-						своей
-						волатильностью, мы
-						представляем первый в Казахстане
-						регулируемый стейблкоин,
-						полностью обеспеченный национальной валютой – тенге. Каждый стейблкоин равен 1 KZT, что
-						обеспечивает максимальную
-						предсказуемость и безопасность ваших финансовых операций.</p>
+					<p class="m-0 f-18 about-descr" data-i18n="about.description">
+						В мире, где криптовалюты известны своей волатильностью, мы представляем первый в Казахстане
+						регулируемый стейблкоин, полностью обеспеченный национальной валютой – тенге. Каждый
+						стейблкоин
+						равен 1 KZT, что обеспечивает максимальную предсказуемость и безопасность ваших финансовых
+						операций.</p>
 				</div>
 			</div>
 		</div>
@@ -227,9 +241,9 @@
 
 				<div class="benefits-content">
 					<div class="tag tag-sm">
-						<span>skzt</span>
+						<span class="like-write">sKZT</span>
 					</div>
-					<h2 class="title" data-i18n="benefits.title">Основные возможности SKZT</h2>
+					<h2 class="title" data-i18n="benefits.title">Основные возможности sKZT</h2>
 					<p class="f-18 benefits-descr" data-i18n="benefits.description">Наша цель - надежность,
 						прозрачность, доступность</p>
 					<a href="#testing" class="btn outline" data-i18n="benefits.button">Стать первым пользователем</a>
@@ -315,9 +329,7 @@
 						<h2 class="title" data-i18n="testing.title">Заявки на участие в первой волне
 							использования sKZT</h2>
 						<p class="f-18 testing-descr" data-i18n="testing.description">Оставьте свои контактные данные, и
-							мы
-							сообщим вам о дате
-							запуска</p>
+							мы сообщим вам о дате запуска</p>
 					</div>
 					<div class="content-footer">
 						<p class="m-0" data-i18n="testing.data">Заявки принимаются до 15.11.2025</p>
@@ -370,23 +382,26 @@
 					</div>
 					<h2 class="title" data-i18n="wallet.title">Чтобы открыть кошелек, вам понадобится только паспорт
 					</h2>
-					<p class="walet-info" data-i18n="wallet.title">Для покупки sKZT за KZT необходимо:</p>
+					<p class="walet-info walet-subtitle" data-i18n="wallet.subtitle">Криптовалютные операции доступны
+						всем пользователям</p>
+					<p class="walet-info" data-i18n="wallet.title">Покупка sKZT за KZT доступна только пользователям,
+						которые:</p>
 					<ul class="requests no-list s-s d-column">
 						<li class="c-s">
-							<span class="icon icon-28">
+							<span class="icon icon-20">
 								<svg>
 									<use xlink:href="#check-circle"></use>
 								</svg>
 							</span>
-							<span data-i18n="wallet.items.1.name">Иметь гражданство РК (быть резидентом)</span>
+							<span data-i18n="wallet.items.1.name">Имеют гражданство РК</span>
 						</li>
 						<li class="c-s">
-							<span class="icon icon-28">
+							<span class="icon icon-20">
 								<svg>
 									<use xlink:href="#check-circle"></use>
 								</svg>
 							</span>
-							<span data-i18n="wallet.items.2.name">Быть клиентом Halyk Bank и иметь действующий
+							<span data-i18n="wallet.items.2.name">Являются клиентом Halyk Bank и имеют действующий
 								банковский счет</span>
 						</li>
 					</ul>
@@ -476,7 +491,7 @@
 						<span data-i18n="faq.tag">Faq</span>
 					</div>
 					<h2 class="title" data-i18n="faq.title">Часто задаваемые вопросы</h2>
-					<p class="walet-info">Отвечаем на вопросы по работе sKZT</p>
+					<p class="walet-info" data-i18n="faq.description">Отвечаем на вопросы по работе sKZT</p>
 				</div>
 				<div class="faq-list">
 
@@ -559,7 +574,9 @@
 							<span class="question-icon"></span>
 						</summary>
 						<div class="faq-answer" data-i18n="faq.questions.5.answer">
-							<p>Да, в любой момент вы можете обменять 1 sKZT = 1 KZT через онлайн-кошелек.</p>
+							<p>Да, в любой момент вы можете обменять 1 sKZT = 1 KZT через онлайн-кошелек, если вы
+								резидент РК с действующим банковским
+								счетом в Halyk банк.</p>
 						</div>
 					</details>
 
@@ -572,7 +589,7 @@
 						<div class="faq-answer" data-i18n="faq.questions.6.answer">
 							<p>Каждый sKZT обеспечен реальными тенге на счетах в регулируемых банках. Компания-эмитент
 								Sanaly Systems регулярно
-								публикует отчёты, подтверждающие 100% резервирование.</p>
+								публикует отчеты, подтверждающие 100% резервирование.</p>
 						</div>
 					</details>
 
@@ -583,7 +600,7 @@
 							<span class="question-icon"></span>
 						</summary>
 						<div class="faq-answer" data-i18n="faq.questions.7.answer">
-							<p>Sanaly Systems проходит регулярные аудиты и предоставляет публичные отчёты о резервах.
+							<p>Sanaly Systems проходит регулярные аудиты и предоставляет публичные отчеты о резервах.
 								Кроме того, деятельность компании
 								контролируется Нацбанком Казахстана, что минимизирует риски.</p>
 						</div>
@@ -649,9 +666,9 @@
 			<div class="get-content c-c d-column">
 				<h2 class="title m-0" data-i18n="get.title">Свяжитесь с нами</h2>
 				<p class="get-descr" data-i18n="get.description">
-					Интересуетесь SKZT или есть вопросы? Ответим в ближайшее время
+					Интересуетесь sKZT или есть вопросы? Ответим в ближайшее время
 				</p>
-				<a href="mailto:skzt@sanaly.kz" class="btn main" data-i18n="get.button">Связаться с нами</a>
+				<a href="mailto:sKZT@sanaly.kz" class="btn main" data-i18n="get.button">Связаться с нами</a>
 			</div>
 		</div>
 	</section>
@@ -661,12 +678,12 @@
 			<div class="footer-content">
 				<div class="footer-head s-sb">
 					<a href="#top" class="logo c-s">
-						<img src="./img/skzt-logo.svg" fetchpriority="high" alt="sKZT logo">
+						<img src="./img/sKZT-logo.svg" fetchpriority="high" alt="sKZT logo">
 					</a>
 					<div class="contacts">
 						<div class="label">Email</div>
 						<div class="contuct-item">
-							<a href="mailto:skzt@sanaly.kz">skzt@sanaly.kz</a>
+							<a href="mailto:sKZT@sanaly.kz">sKZT@sanaly.kz</a>
 						</div>
 					</div>
 				</div>

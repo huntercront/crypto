@@ -815,6 +815,10 @@ ul li + li {
 .lh-165 {
   line-height: 1.65;
 }
+
+.like-write {
+  text-transform: none !important;
+}
 @media screen and (max-width: 480px) {
   .title-sm {
     font-size: 1.275rem;
@@ -985,6 +989,15 @@ ul li + li {
   .hover-bg {
     display: none;
   }
+  .nav ul li,
+  .nav ul li a {
+    width: 100%;
+    text-align: center;
+  }
+  .nav ul li {
+    display: flex;
+    justify-content: center;
+  }
 }
 @media screen and (max-width: 560px) {
   .wallet-btn {
@@ -1012,14 +1025,14 @@ ul li + li {
 }
 .hero-content {
   flex-direction: column;
-  padding: 4rem 2rem 5rem 2rem;
+  padding: 4rem 2rem 3rem 2rem;
 }
 .hero-wrap {
   overflow: hidden;
   border-radius: 1rem;
   position: relative;
 }
-.hero-wrap:before {
+/* .hero-wrap:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -1028,7 +1041,7 @@ ul li + li {
   bottom: 0;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
   z-index: 2;
-}
+} */
 .hero-content,
 .hero-wrap {
   position: relative;
@@ -1068,6 +1081,14 @@ ul li + li {
 .charts {
   margin-top: 2.5rem;
   column-gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.chart-descr {
+  text-align: center;
+  flex: 0 0 100%;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-black);
 }
 .chart {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 0 6px 0 rgba(0, 0, 0, 0.02);
@@ -1094,15 +1115,59 @@ ul li + li {
     0.4px -0.4px 0 var(--text-black), -0.4px 0.4px 0 var(--text-black),
     0.4px 0.4px 0 var(--text-black);
 }
+.hidden-number {
+  height: 1.35em;
+  width: 80%;
+  background: var(--gray-bg);
+  border-radius: 0.5rem;
+  margin-top: 0.25em;
+}
 .app-icon {
   width: 1.5rem;
   margin-bottom: 0.5rem;
 }
+.chart-img {
+  position: relative;
+}
 .chart-img img {
-  height: 5.5rem;
+  height: 6.25rem;
 }
 .chart-inner {
   justify-content: space-between;
+}
+
+/* figcaption */
+.figcaption {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  gap: 0.25rem;
+}
+.figcaption img {
+  width: 1rem;
+  height: 1rem;
+}
+.figcaption .name,
+.figcaption .total {
+  line-height: 1;
+}
+.figcaption .name {
+  color: var(--placeholder);
+  font-size: 0.65rem;
+}
+.figcaption .total {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-black);
+  text-shadow: -0.15px -0.15px 0 var(--text-black),
+    0.15px -0.15px 0 var(--text-black), -0.15px 0.15px 0 var(--text-black),
+    0.15px 0.15px 0 var(--text-black);
+}
+.figcaption .total.hidden-number {
+  margin: 0;
+  background: var(--gray-bg-100);
+  width: 30%;
+  height: 1em;
 }
 @media screen and (max-width: 800px) {
   .charts {
@@ -1128,18 +1193,7 @@ ul li + li {
   overflow: hidden;
   border-radius: 0.5rem;
 }
-.balance-info {
-  position: absolute;
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-  bottom: 1.75rem;
-  right: 2.75rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  width: 50%;
-}
+
 .about-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1156,6 +1210,29 @@ ul li + li {
   height: 100%;
   object-fit: cover;
 }
+/* balance */
+.balance-info {
+  position: absolute;
+  z-index: 2;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  bottom: 1.5rem;
+  right: 1.75rem;
+  padding: 0.75rem 1.26rem;
+  border-radius: 0.5rem;
+}
+.balance-info img {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+.balance-info span {
+  font-size: 1.125rem;
+  color: var(--white);
+  font-weight: 500;
+  text-transform: uppercase;
+}
 @media screen and (max-width: 1120px) {
   .about-wrap {
     column-gap: 2.5rem;
@@ -1167,7 +1244,7 @@ ul li + li {
     row-gap: 1.5rem;
   }
   .hero-content {
-    padding: 3rem 1rem 4rem 1rem;
+    padding: 3rem 1rem 2rem 1rem;
   }
 }
 /* benefits */
@@ -1260,9 +1337,9 @@ ul li + li {
 }
 .wallet-wrap {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.25fr 1fr;
   align-items: center;
-  column-gap: 3rem;
+  column-gap: 2rem;
 }
 .wallet .requests li,
 .wallet .requests {
@@ -1270,15 +1347,20 @@ ul li + li {
 }
 .wallet .requests li {
   background: var(--main-50);
-  padding: 0.75rem 1.5rem 0.75rem 1rem;
+  padding: 0.5rem 1.25rem 0.5rem 0.75rem;
   border-radius: 0.5rem;
 }
 .wallet .requests {
-  margin-bottom: 2.75rem;
+  margin-bottom: 1.75rem;
   color: var(--text-black);
 }
 .walet-info {
   margin: 1.25rem 0;
+}
+.walet-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-black);
+  font-weight: 500;
 }
 @media screen and (max-width: 840px) {
   .wallet-wrap {
