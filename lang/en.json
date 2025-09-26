@@ -94,14 +94,14 @@
   "wallet": {
     "tag": "Wallet",
     "title": "Only a passport is needed to open a wallet",
-    "subtitle": "Cryptocurrency operations are available to all users",
-    "description": "To buy sKZT for KZT, you need to:",
+    "subtitle": "Cryptocurrency operations are available to all registered users",
+    "description": "The purchase of sKZT for KZT is only available to users who:",
     "items": {
       "1": {
-        "name": "Be a citizen of the Republic of Kazakhstan"
+        "name": "Cryptocurrency operations are available to all users"
       },
       "2": {
-        "name": "Be a customer of Halyk Bank and have an active bank account"
+        "name": "The purchase of sKZT for KZT is available only to citizens of the Republic of Kazakhstan with an active account in Halyk Bank"
       }
     },
     "button": "Available from Nov 15"
@@ -131,8 +131,8 @@
         "answer": "<p>To create an online wallet, you will need to present an identity document and pass a liveness test (verification that a live person is in front of the camera).</p>"
       },
       "5": {
-        "name": "Can I exchange sKZT back to tenge?",
-        "answer": "<p>Yes, at any time, you can exchange 1 sKZT = 1 KZT through an online wallet if you are a resident of the Republic of Kazakhstan with an active bank account in Halyk Bank.</p>"
+        "name": "Can sKZT be exchanged back to tenge?",
+        "answer": "<p>Yes, at any time you can exchange 1 sKZT = 1 KZT through an online wallet if you are a resident of the RK with an active bank account in Halyk Bank.</p>"
       },
       "6": {
         "name": "How is the 1:1 exchange rate stability ensured?",
