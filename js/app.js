@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       VERSION: "translations_version",
     },
     CACHE_EXPIRATION_MS: 7 * 24 * 60 * 60 * 1000,
-    CURRENT_VERSION: "2.6.1",
+    CURRENT_VERSION: "2.6.2",
   };
   console.log(TRANSLATION_CONFIG.CURRENT_VERSION);
   let currentTranslations = {};
