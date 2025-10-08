@@ -81,7 +81,7 @@
         "name": "Email"
       },
       "4": {
-        "agreement": "I consent to the processing of <a href=\"#\" target=\"_blank\">personal data</a>"
+        "agreement": "I consent to the processing of <a href=\"./docs/Privacy Policy eng.docx\" target=\"_blank\">personal data</a>"
       },
       "5": {
         "name": "Submit"

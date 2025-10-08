@@ -81,7 +81,7 @@
         "name": "Электронная почта"
       },
       "4": {
-        "agreement": "Я согласен на обработку <a href=\"#\" target=\"_blank\">персональных данных</a>"
+        "agreement": "Я согласен на обработку <a href=\"./docs/Privacy Policy ru.docx\" target=\"_blank\">персональных данных</a>"
       },
       "5": {
         "name": "Отправить"
